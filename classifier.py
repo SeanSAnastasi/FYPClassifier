@@ -23,7 +23,7 @@ for x in data:
     else:
         
         idKeys.append(x["id"])
-    print(exists)
+    
     for y in x["data"]:
         date =datetime.strptime(y["date"], '%a %b %d %Y %H:%M:%S %Z%z')
         
