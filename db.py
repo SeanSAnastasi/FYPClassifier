@@ -47,9 +47,19 @@ for x in data:
         dateData.append(tempDate)
         tempDate = []
         tempHrm = []
+# print(idKeys)
+
+# Sort data here
+
+
+
+    
 
 for x in range(len(idKeys)):
-    print(idKeys)
+
+    dateData[x], hrmData[x]  =   (list(t) for t in zip(*sorted(zip(dateData[x], hrmData[x] ))))
+
+    print(str(x)+" : " + str(idKeys[x]))
     np.savetxt('watch/S'+str(x)+'.csv', hrmData[x], fmt='%i', delimiter=',')
     # plt.scatter(dateData[x], hrmData[x])
     # plt.xlabel("Time (D H:M:S)")
